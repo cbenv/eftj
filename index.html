@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="description" content="The Wedding of Juan and Elvira">
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -15,8 +15,6 @@
     <style>
         :root {
             --background-url: url('./assets/background.jpg');
-            --header-background: url('./assets/header-slim.png');
-            --header-background-height: 0px;
             --nav-height: 56px;
             --main-top-margin: 100px;
             --theme-color: #000080;
@@ -39,23 +37,13 @@
 
             background-color: #000000;
             background-image: var(--background-url);
-            /* background-size: cover; */
+            background-position: center center;
+            background-size: cover;
             background-repeat: no-repeat;
+            background-attachment: fixed;
 
             font-family: Arial;
             color: var(--theme-color-negative);
-        }
-
-        header {
-            position: absolute;
-            top: 0;
-            width: 100vw;
-            height: var(--header-background-height);
-
-            background-image: var(--header-background);
-            background-position: bottom;
-            background-size: cover;
-            background-repeat: no-repeat;
         }
 
         nav {
@@ -64,7 +52,7 @@
             width: 100%;
             height: var(--nav-height);
 
-            background-color: #700726CC;
+            background-color: #460016DD;
 
             line-height: var(--nav-height);
             font-size: 1.2em;
@@ -180,7 +168,7 @@
             <div id="nav-links">
                 <a class="nav-link" href="/">Home</a>
                 <a class="nav-link disabled" aria-disabled="true" href="/stream">Stream</a>
-                <a class="nav-link disabled" aria-disabled="true" href="/rsvp">RSVP</a>
+                <a class="nav-link" href="/rsvp">RSVP</a>
             </div>
             <div class="spacer"></div>
         </div>
@@ -189,7 +177,7 @@
         <div id="headline" class="container">
             <h2>Christoforus Juan Benvenuto</h2>
             <h2>&</h2>
-            <h2>Elvira Budiawan</h2>
+            <h2>Agatha Elvira Budiawan</h2>
         </div>
     </main>
 </body>

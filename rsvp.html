@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="The Wedding of Juan and Elvira">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <style>
+        :root {
+            --background-url: url('./assets/rsvp-background.jpg');
+            --nav-height: 56px;
+            --main-top-margin: 100px;
+            --theme-color-alternate: #460016;
+            --theme-color-negative: #D0D0D0;
+        }
+
+        body {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+
+            background-color: #000000;
+            background-image: var(--background-url);
+            background-position: left 15% bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            font-family: Arial;
+            color: var(--theme-color-negative);
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            height: var(--header-background-height);
+
+            background-image: var(--header-background);
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            position: fixed;
+            top: 2vh;
+            width: 100%;
+            height: var(--nav-height);
+
+            background-color: #460016DD;
+
+            line-height: var(--nav-height);
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        main {
+            margin-top: var(--main-top-margin);
+            height: calc(100vh - var(--main-top-margin));
+            padding: 0 5vw;
+        }
+
+        a, a:hover {
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            margin: 0 auto;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        @media screen and (min-width: 608px) {
+            .container {
+                max-width: 576px;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            .container {
+                max-width: 768px;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        .spacer {
+            flex: 1 1;
+        }
+
+        #nav-links > * {
+            display: inline-block;
+            height: var(--nav-height);
+            padding: 0 16px;
+        }
+
+        .nav-link {
+            color: var(--theme-color-negative);
+        }
+
+        .nav-link:hover {
+            background-color: var(--theme-color-alternate);
+            opacity: 1;
+        }
+
+        .nav-link.disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+            color: #888;
+        }
+    </style>
+
+    <link rel="canonical" href="https://www.ElviraFoundTheJuan.com">
+    <title>Elvira Found the Juan</title>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "url": "https://www.ElviraFoundTheJuan.com",
+            "name": "Elvira Found the Juan",
+            "headline": "The Wedding of Juan and Elvira",
+            "description": "Be a witness to our special day on 02/12/22",
+            "significantLink": "",
+            "relatedLink": ""
+        }
+    </script>
+</head>
+
+<body>
+    <header></header>
+    <nav>
+        <div class="container">
+            <div class="spacer"></div>
+            <div id="nav-links">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link disabled" aria-disabled="true" href="/stream">Stream</a>
+                <a class="nav-link" href="/rsvp">RSVP</a>
+            </div>
+            <div class="spacer"></div>
+        </div>
+    </nav>
+    <main>
+        <script type="text/javascript" src="https://elvirafoundthejuan.rsvpify.com/embed"></script>
+    </main>
+</body>
+
+</html>

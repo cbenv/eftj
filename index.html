@@ -29,6 +29,13 @@
             font-style: normal;
         }
 
+        @font-face {
+            font-family: 'Alex Brush';
+            src: url('./assets/alex-brush.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
             position: absolute;
             width: 100vw;
@@ -46,9 +53,22 @@
             color: var(--theme-color-negative);
         }
 
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .spacer {
+            flex: 1 1;
+        }
+
         nav {
             position: fixed;
-            top: 2vh;
+            top: 22px;
             width: 100%;
             height: var(--nav-height);
 
@@ -62,6 +82,27 @@
         main {
             margin-top: var(--main-top-margin);
             height: calc(100vh - var(--main-top-margin));
+
+            scroll-snap-type: y mandatory;
+        }
+
+        main .spacer {
+            flex-basis: 50px;
+        }
+
+        .section {
+            max-width: 100%;
+            min-height: 100%;
+            padding: 16px;
+            box-sizing: border-box;
+
+            scroll-snap-align: start;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
         }
 
         a, a:hover {
@@ -93,10 +134,6 @@
             }
         }
 
-        .spacer {
-            flex: 1 1;
-        }
-
         #nav-links > * {
             display: inline-block;
             height: var(--nav-height);
@@ -118,29 +155,48 @@
             color: #888;
         }
 
-        #headline {
-            width: 100%;
-            height: 100%;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
         #headline > * {
             margin-block: 0;
         }
 
         #headline h2 {
             font-size: 5em;
-            font-family: 'Parisienne';
+            font-family: 'Alex Brush';
             font-weight: normal;
         }
 
         #headline h3 {
             font-size: 3em;
+        }
+
+        #about {
+            text-align: left;
+            font-size: 1.1em;
+        }
+
+        #schedule {
+            line-height: 1.5em;
+        }
+
+        #schedule .icon {
+            width: 48px;
+            height: 48px;
+        }
+
+        #schedule h2 {
+            font-size: 2em;
+            margin: 0.5em 0;
+        }
+
+        #schedule h3 {
+            font-size: 1.25em;
+            margin: 0.4em 0;
+        }
+
+        #schedule h5 {
+            font-weight: 400;
+            font-size: 1.1em;
+            margin: 0;
         }
     </style>
 
@@ -154,14 +210,13 @@
             "name": "Elvira Found the Juan",
             "headline": "The Wedding of Juan and Elvira",
             "description": "Be a witness to our special day on 02/12/22",
-            "significantLink": "",
+            "significantLink": "https://www.ElviraFoundTheJuan.com/rsvp",
             "relatedLink": ""
         }
     </script>
 </head>
 
-<body>
-    <header></header>
+<body class="hide-scrollbar">
     <nav>
         <div class="container">
             <div class="spacer"></div>
@@ -174,10 +229,41 @@
         </div>
     </nav>
     <main>
-        <div id="headline" class="container">
+        <div id="headline" class="container section">
             <h2>Christoforus Juan Benvenuto</h2>
             <h2>&</h2>
             <h2>Agatha Elvira Budiawan</h2>
+        </div>
+
+        <div id="about" class="container section">
+            <div class="spacer"></div>
+            <div>
+                <p>Juan and Elvira’s story is a perfect example of the importance of timing. They have all the reasons in the world to meet way earlier: They are both from Indonesia, they went to Seattle one year apart, and both went to University of Washington. But, it took them 5 years to finally meet each other in Summer 2014 at Komunitas Tritunggal Mahakudus (KTM) / Holy Trinity Community (HTC) cell meeting. From then, their friendship grew as they served at the Indonesian Catholic community and weekend retreats.</p>
+                <p>It took them a snowboarding/Christmas trip to Leavenworth and the top of Steven’s to realize they belong to each other, and they started dating in the beginning of 2016. It was not without a challenge, though, as Elvira moved to New York and Boston for grad school and work, while Juan continued working in Seattle.</p>
+                <p>But, through all the distance and challenges, love prevails. They both knew that no matter how many miles were between them or how many days they had to be apart, that they wanted to be together for the rest of their lives. So, In Winter 2020, Juan asked for Elvira’s hand in marriage during yet another snowboarding/Christmas trip in Leavenworth.</p>
+                <p>It is a great honor for Juan and Elvira to have you be a part of their story in February. Winter wedding, of course, ‘cause winter is their favorite season, and after all, the cold never bothered them anyway!</p>
+            </div>
+            <div class="spacer"></div>
+        </div>
+
+        <div id="schedule" class="container section">
+            <div class="spacer"></div>
+            <svg class="icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M11,2H13V4H15V6H13V9.4L22,13V15L20,14.2V22H14V17A2,2 0 0,0 12,15A2,2 0 0,0 10,17V22H4V14.2L2,15V13L11,9.4V6H9V4H11V2M6,20H8V15L7,14L6,15V20M16,20H18V15L17,14L16,15V20Z" />
+            </svg>
+            <h2>Wedding Mass</h2>
+            <h3>Saturday, February 12 2022<br>10:30 AM PST</h3>
+            <h3>St. James Cathedral</h3>
+            <h5>804 9th Ave<br>Seattle WA 98104</h5>
+            <div class="spacer"></div>
+            <svg class="icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M14.53 1.45L13.45 2.53L15.05 4.13C15.27 4.38 15.38 4.67 15.38 5S15.27 5.64 15.05 5.86L11.5 9.47L12.5 10.55L16.13 6.94C16.66 6.35 16.92 5.7 16.92 5C16.92 4.3 16.66 3.64 16.13 3.05L14.53 1.45M10.55 3.47L9.47 4.55L10.08 5.11C10.3 5.33 10.41 5.63 10.41 6S10.3 6.67 10.08 6.89L9.47 7.45L10.55 8.53L11.11 7.92C11.64 7.33 11.91 6.69 11.91 6C11.91 5.28 11.64 4.63 11.11 4.03L10.55 3.47M21 5.06C20.31 5.06 19.67 5.33 19.08 5.86L13.45 11.5L14.53 12.5L20.11 6.94C20.36 6.69 20.66 6.56 21 6.56S21.64 6.69 21.89 6.94L22.5 7.55L23.53 6.47L22.97 5.86C22.38 5.33 21.72 5.06 21 5.06M7 8L2 22L16 17L7 8M19 11.06C18.3 11.06 17.66 11.33 17.06 11.86L15.47 13.45L16.55 14.53L18.14 12.94C18.39 12.69 18.67 12.56 19 12.56C19.33 12.56 19.63 12.69 19.88 12.94L21.5 14.53L22.55 13.5L20.95 11.86C20.36 11.33 19.7 11.06 19 11.06Z" />
+            </svg>
+            <h2>Reception</h2>
+            <h3>Saturday, February 12 2022<br>12:30 PM PST</h3>
+            <h3>Skyline Room at Museum of Flight</h3>
+            <h5>9404 East Marginal Way South<br>Seattle, WA 98108</h5>
+            <div class="spacer"></div>
         </div>
     </main>
 </body>

@@ -36,6 +36,10 @@
             font-style: normal;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             position: absolute;
             width: 100vw;
@@ -64,6 +68,11 @@
 
         .spacer {
             flex: 1 1;
+        }
+
+        .qr-code {
+            width: 180px;
+            height: 180px;
         }
 
         nav {
@@ -106,6 +115,7 @@
         }
 
         a, a:hover {
+            color: var(--theme-color-negative);
             text-decoration: none;
         }
 
@@ -134,7 +144,7 @@
             }
         }
 
-        #nav-links > * {
+        .nav-links > * {
             display: inline-block;
             height: var(--nav-height);
             padding: 0 16px;
@@ -189,7 +199,7 @@
             max-height: 600px;
             padding: 16px 2.5%;
             
-            scroll-snap-align: center;
+            scroll-snap-align: start;
         }
 
         #photos .photo:first-child {
@@ -224,6 +234,34 @@
             font-size: 1.1em;
             margin: 0;
         }
+
+        #registries .card {
+            width: 280px;
+            height: 280px;
+            padding: 16px;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            background-color: #FFFFFF;
+            color: #000000;
+            font-weight: normal;
+        }
+
+        #registries .card > * {
+            margin: 0.5em 0;
+        } 
+
+        #registries .honeyfund-logo {
+            height: 1.5em;
+            vertical-align: middle;
+        }
+
+
     </style>
 
     <link rel="canonical" href="https://www.ElviraFoundTheJuan.com">
@@ -243,10 +281,10 @@
 </head>
 
 <body class="hide-scrollbar">
-    <nav>
+    <nav id="nav">
         <div class="container">
             <div class="spacer"></div>
-            <div id="nav-links">
+            <div class="nav-links">
                 <a class="nav-link" href="/">Home</a>
                 <a class="nav-link disabled" aria-disabled="true" href="/stream">Stream</a>
                 <a class="nav-link" href="/rsvp">RSVP</a>
@@ -254,7 +292,7 @@
             <div class="spacer"></div>
         </div>
     </nav>
-    <main>
+    <main id="main">
         <div id="headline" class="container section">
             <h2>Christoforus Juan Benvenuto</h2>
             <h2>&</h2>
@@ -305,6 +343,16 @@
             <h3>Skyline Room at Museum of Flight</h3>
             <h5>9404 East Marginal Way South<br>Seattle, WA 98108</h5>
             <div class="spacer"></div>
+        </div>
+
+        <div id="registries" class="container section">
+            <a href="https://www.honeyfund.com/wedding/elvirafoundthejuan" target="_blank">
+                <div class="card">
+                    <img class="qr-code" src="/assets/registry-qr-code.png" />
+                    <p>We are registered at <img class="honeyfund-logo" src="https://www.honeyfund.com/assets/img/registry-cards/logo.svg" alt="Honeyfund"></p>
+                </div>
+            </a>
+            
         </div>
     </main>
 </body>

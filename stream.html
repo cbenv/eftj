@@ -9,7 +9,7 @@
     <meta property="og:title" content="Elvira Found the Juan" />
     <meta property="og:description" content="The Wedding of Juan and Elvira. Be a witness to our special day on 02/12/22!" />
     <meta property="og:image" itemprop="image" content="//www.ElviraFoundTheJuan.com/assets/thumbnail3.jpg" />
-    <meta property="og:url" content="https://www.ElviraFoundTheJuan.com/rsvp" />
+    <meta property="og:url" content="https://www.ElviraFoundTheJuan.com/stream" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
 
@@ -160,9 +160,23 @@
             color: #888;
         }
 
-        .notice {
-            font-size: 1.25em;
+        .embedded-video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
         }
+
+        .embedded-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+
     </style>
 
     <link rel="canonical" href="https://www.ElviraFoundTheJuan.com">
@@ -171,7 +185,7 @@
         {
             "@context": "http://schema.org",
             "@type": "WebPage",
-            "url": "https://www.ElviraFoundTheJuan.com/rsvp",
+            "url": "https://www.ElviraFoundTheJuan.com/stream",
             "name": "Elvira Found the Juan",
             "headline": "The Wedding of Juan and Elvira",
             "description": "Be a witness to our special day on 02/12/22",
@@ -197,9 +211,15 @@
     <main id="main">
         <div id="video" class="container section">
             <div class="spacer"></div>
-            <div class="notice">
-                Whoops, the plane has boarded!<br><br>
-                Please let the captain know at rsvp@elvirafoundthejuan.com if you are still interested in attending.
+            <div class="embedded-video-container">
+                <iframe
+                    class="embedded-video"
+                    src="https://www.youtube.com/embed/ydarbDz6KIs"
+                    title="Holy Matrimony of Juan and Elvira"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
             </div>
             <div class="spacer"></div>
         </div>
